@@ -1,0 +1,356 @@
+@media (max-width: 1240px) {
+    .row_1 {
+        padding: 0 50px;
+    }
+
+    .ul_left li:nth-child(5) {
+        display: none;
+    }
+
+    .search::placeholder, .search2::placeholder {
+        font-size: 14px;
+    }
+
+    .menu_1 .bi-house,
+    .menu_1 #dong_ho,
+    .menu_1 #smartWatch {
+        display: none;
+    }
+}
+
+@media (max-width: 1240px) and (min-width: 1001px) {
+    .menu_1 {
+        padding: 0;
+    }
+
+    .menu_1 .navbar-nav {
+        padding-left: 20px;
+    }
+
+    .menu_1 li {
+        height: 75px;
+        padding-top: 0 !important;
+    }
+
+    .menu_1 #li_address {
+        width: 13%;
+        padding: 0;
+        margin: 0;
+        margin-top: 7px;
+    }
+
+    .menu_1 #li_address::before {
+        font-size: 10px;
+    }
+
+    .menu_1 a {
+        padding: 0 !important;
+        line-height: 75px;
+    }
+
+    .menu_1 a {
+        padding-top: 0 !important;
+    }
+
+    .menu_1 #search {
+        margin-top: 20px;
+        line-height: 0;
+        height: 75px;
+    }
+
+    .menu_1 #logo-clockworld {
+        width: 40px !important;
+        height: 40px;
+    }
+
+    .menu_1 #text_clockworld {
+        font-size: 16px;
+    }
+
+    .menu_1 .dropdown-item {
+        line-height: 30px;
+    }
+
+    #cart {
+        width: 100%;
+    }
+
+    .icon_cart {
+        margin-left: 5px !important;
+        width: 20px;
+    }
+
+    .footer h5 {
+        font-size: 21px;
+    }
+
+    .footer p {
+        font-size: 19px;
+    }
+
+    .col_footer1 {
+        margin-left: 0;
+        margin-bottom: 13px;
+        padding-left: 70px;
+    }
+
+    .col_footer2 {
+        padding-left: 20px;
+    }
+
+    .footer_contact {
+        padding-left: 55px;
+    }
+
+    .footer_contact2 {
+        padding-left: 70px;
+    }
+
+    .footer_img {
+        padding-left: 20px;
+    }
+
+    .footer_img img {
+        width: 80%;
+    }
+
+    .zalo {
+        top: 750px;
+    }
+
+    .mes {
+        top: 830px;
+    }
+
+}
+
+@media (max-width: 1000px) and (min-width: 768px) {
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .logo>i {
+        display: none;
+    }
+
+    .navbar-nav li:nth-child(1) {
+        width: 6%;
+    }
+
+    img#logo-clockworld {
+        width: 80% !important;
+        padding-top: 5px;
+        transform: translateX(20%);
+    }
+
+    .navbar-nav li:nth-child(2),
+    .navbar-nav li:nth-child(3) {
+        width: 10%;
+    }
+
+    .navbar-nav li:nth-child(4) {
+        width: 9%;
+    }
+
+    .navbar-nav li:nth-child(5) {
+        width: 14%;
+    }
+
+    #li_address {
+        padding-top: 4% !important;
+    }
+
+    .search {
+        margin-top: -3px !important;
+    }
+
+    .search::placeholder {
+        font-size: 13px !important;
+    }
+
+    #icon_cart,
+    #icon_account {
+        width: 70%;
+    }
+
+    .col_footer1 {
+        margin-left: 0;
+        margin-bottom: 13px;
+        padding-left: 70px;
+    }
+
+    .col_footer2 {
+        padding-left: 20px;
+    }
+
+    .footer_contact {
+        padding-left: 55px;
+    }
+
+    .footer_contact2 {
+        padding-left: 70px;
+    }
+
+    .footer_img {
+        padding-left: 20px;
+    }
+
+    .footer_img img {
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .row_1 {
+        padding: 0;
+    }
+
+    .ul_left {
+        width: 100%;
+        text-align: center;
+    }
+
+    .ul_right {
+        width: 100%;
+        text-align: center !important;
+    }
+
+    .row_2 {
+        width: 100% !important;
+        overflow: hidden;
+        height: auto;
+    }
+
+    .navbar-nav {
+        font-size: 20px;
+    }
+
+    .nav-item {
+        width: 100% !important;
+    }
+
+    .logo2 {
+        width: 15%;
+        display: block;
+        padding-left: 0 !important;
+        transform: translateX(35%);
+    }
+
+    .logo2 i {
+        display: none;
+        /*an chu Clockworld*/
+    }
+
+    img#logo-clockworld2 {
+        width: 45% !important;
+        transform: translateX(10%);
+    }
+
+    .btn_menu {
+        width: 15%;
+    }
+
+    #btn_navbar {
+        width: 40%;
+        padding: 0;
+        transform: translateX(80%);
+        border: none;
+    }
+
+    #btn_navbar span {
+        width: 80%;
+    }
+
+    #btn_navbar:hover {
+        outline: none;
+    }
+
+    #li_address2 {
+        display: block;
+        width: 20% !important;
+        text-align: center;
+        padding: 0 !important;
+        font-size: 13px;
+        margin: 5px 0;
+        padding-top: 8px !important;
+    }
+
+    .form_search2 {
+        width: 50%;
+    }
+
+    input.search2 {
+        display: block;
+        width: 50% !important;
+        transform: translateX(20%);
+    }
+
+    .menu_1 {
+        transform: translateX(5%);
+    }
+
+    .nav-link.logo {
+        transform: translateX(-40%);
+        margin-top: 5px;
+    }
+
+    .li_logo {
+        display: none !important;
+    }
+
+    .form_search {
+        display: none !important;
+    }
+
+    #li_address {
+        width: 20% !important;
+    }
+
+    .address1,
+    #li_address,
+    #input_search {
+        display: none;
+    }
+
+    .modal_dialog_css{
+        /* transform: translateX(20%) !important; */
+    }
+
+    .modal_header_css{
+        padding: 0;
+    }
+
+    .modal_body_css{
+        padding: 0 10px;
+    }
+    
+    .modal_header_css h4{
+        font-size: 16px !important;
+        padding-left: 25px;
+    }
+
+    .col_footer1,
+    .col_footer2,
+    .footer_contact,
+    .footer_contact2,
+    .footer_img {
+        text-align: center !important;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .footer_img img {
+        width: 50% !important;
+    }
+
+    .footer h5 {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 576px){
+    .modal_dialog_css{
+        transform: translateX(20%) !important;
+    }
+}
