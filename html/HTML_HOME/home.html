@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
     <script src="../../bootstrap/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../../css/home.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="../../js/jquery-3.4.1.min.js"></script>
 </head>
@@ -37,71 +38,97 @@
                 </ul>
             </div>
 
-            <div class="row row_2">
-                <div class="row menu_1">
-                    <div class="col-lg-2 logo">
-                        <a href="#"><img src="../../img/logo.png" alt="">
-                            <i>ClockWorld</i>
-                        </a>
+            <nav class="navbar navbar-expand-md navbar-light bg-light p-0">
+                <div class="container row_2">
+                    <div class="logo2" href="../HTML_HOME/home.html">
+                        <img id="logo-clockworld2" src="../../img/logo.png" alt="">
+                        <i id="text_clockworld">ClockWorld</i>
                     </div>
-                    <div class="col-lg-10 menu text-start">
-                        <ul class="menu_cap1">
-                            <li>
-                                <a href="#">
-                                    <!-- <img src="../img/home.png" alt=""> -->
-                                    <i class="bi bi-house"></i>
-                                    Trang chủ
+
+                    <div class="btn_menu">
+                        <button class="navbar-toggler d-lg-none" id="btn_navbar" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="modal" data-bs-target="#mymodal"
+                        id="li_address2" href="#">
+                        <br><span>Hồ Chí Minh</span>
+                    </a>
+
+                    <form class="d-flex my-2 my-lg-0 form_search2">
+                        <input class="search2" type="text" placeholder="Bạn cần tìm gì?" autofocus>
+                    </form>
+
+                    <div class="collapse navbar-collapse menu_1" id="collapsibleNavId">
+                        <ul class="navbar-nav">
+                            <li class="nav-item m-0 li_logo">
+                                <a class="nav-link logo" href="../HTML_HOME/home.html">
+                                    <img id="logo-clockworld" src="../../img/logo.png" alt="">
+                                    <i id="text_clockworld">ClockWorld</i>
                                 </a>
                             </li>
-                            <li><a href="../../html/HTML_HOME/member.html"></i>Giới thiệu</a></li>
-                            <li><a href="../HTML_HOME/site_map.html">Sitemap</a></li>
-                            <li id="li_address" class="text-center"><a style="line-height: 20px; margin-right: 0;" href="#" data-bs-toggle="modal" data-bs-target="#mymodal" id="address">
-                                    <span>Hồ Chí Minh</span>
-                                    <i class="fa-solid fa-caret-down"></i></a></li>
-                            <li>
-                                <input type="search" name="search" id="search" placeholder="Bạn cần tìm gì?">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="bi bi-house"></i>Trang chủ</a>
                             </li>
-                            <li><a href="#">
-                                    <!-- <img src="../img/watch.png" alt=""> -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="18" fill="currentColor"
-                                        class="bi bi-watch" viewBox="0 0 16 16">
-                                        <path d="M8.5 5a.5.5 0 0 0-1 0v2.5H6a.5.5 0 0 0 0 1h2a.5.5 0 0 0 .5-.5z" />
-                                        <path
-                                            d="M5.667 16C4.747 16 4 15.254 4 14.333v-1.86A6 6 0 0 1 2 8c0-1.777.772-3.374 2-4.472V1.667C4 .747 4.746 0 5.667 0h4.666C11.253 0 12 .746 12 1.667v1.86a6 6 0 0 1 1.918 3.48.502.502 0 0 1 .582.493v1a.5.5 0 0 1-.582.493A6 6 0 0 1 12 12.473v1.86c0 .92-.746 1.667-1.667 1.667zM13 8A5 5 0 1 0 3 8a5 5 0 0 0 10 0" />
-                                    </svg>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML_HOME/member.html">Giới thiệu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML_HOME/site_map.html">Sitemap</a>
+                            </li>
+                            <li class="nav-item text-center address1" id="">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="modal" data-bs-target="#mymodal"
+                                    id="li_address" href="#">
+                                    <br><span>Hồ Chí Minh</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="input_search">
+                                <a class="nav-link" id="search" style="padding-right: 0;" href="#">
+                                    <form class="d-flex my-2 my-lg-0 form_search">
+                                        <input class="search" type="text" placeholder="Bạn cần tìm gì?" autofocus>
+                                    </form>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <img id="dong_ho" src="../../img/watch.png" alt="">
                                     Đồng hồ
-                                    <i class="fa-solid fa-caret-down"></i>
-
-                                    <ul class="menu_cap2">
-                                        <li><a href="../../html/HTML_HOME/dong_ho_nam.html">Đồng hồ nam</a></li>
-                                        <li><a href="../../html/HTML_HOME/dong_ho_nu.html">Đồng hồ nữ</a></li>
-                                        <!-- <li><a href="#">Đồng hồ treo tường</a></li> -->
-                                    </ul>
-                                </a></li>
-                            <li><a href="../HTML_HOME/smartWatch.html" class="smartwatch">
-                                    <!-- <img src="../img/smartwatch.png" alt=""> -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16" fill="currentColor"
-                                        class="bi bi-smartwatch" viewBox="0 0 16 16">
-                                        <path d="M9 5a.5.5 0 0 0-1 0v3H6a.5.5 0 0 0 0 1h2.5a.5.5 0 0 0 .5-.5z" />
-                                        <path
-                                            d="M4 1.667v.383A2.5 2.5 0 0 0 2 4.5v7a2.5 2.5 0 0 0 2 2.45v.383C4 15.253 4.746 16 5.667 16h4.666c.92 0 1.667-.746 1.667-1.667v-.383a2.5 2.5 0 0 0 2-2.45V8h.5a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5H14v-.5a2.5 2.5 0 0 0-2-2.45v-.383C12 .747 11.254 0 10.333 0H5.667C4.747 0 4 .746 4 1.667M4.5 3h7A1.5 1.5 0 0 1 13 4.5v7a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 3 11.5v-7A1.5 1.5 0 0 1 4.5 3" />
-                                    </svg> Smartwatch</a></li>
-                            <li><a href="#">Hỏi đáp</a></li>
-                            <li><a href="../../html/HTML_HOME/gio_hang.html" title="Cart" id="cart">
-                                    <img src="../../img/icon_cart.png" class="icon_cart" alt=""></a></li>
-                            <li><a href="#" title="Account">
-                                    <img src="../../img/icon_user.png" class="icon_account" alt="">
-                                </a></li>
+                                </a>
+                                <div class="dropdown-menu" style="width: 150px;" aria-labelledby="dropdownId">
+                                    <a class="dropdown-item p-0" style="transform: translateX(18%);"
+                                        href="../HTML_HOME/dong_ho_nam.html">Đồng hồ nam</a>
+                                    <a class="dropdown-item p-0" style="transform: translateX(22%);"
+                                        href="../HTML_HOME/dong_ho_nu.html">Đồng hồ nữ</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../HTML_HOME/smartWatch.html">
+                                    <img id="smartWatch" src="../../img/smartwatch.png" alt=""></i>Smartwatch</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Hỏi đáp</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="../../img/icon_cart.png" id="icon_cart" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="account">
+                                    <img src="../../img/icon_user.png" id="icon_account" alt="">
+                                </a>
+                            </li>
                         </ul>
                     </div>
-
                 </div>
-                <div class="clear"></div>
-            </div>
+            </nav>
         </div>
 
-        <div class="row row_3">
-        </div>
+        <div class="row row_3"></div>
 
         <div class="row row_4">
             <div class="col-2 col_sidebar"></div>
@@ -113,7 +140,7 @@
                 </div>
                 <div class="row row-con2">
                     <div class="col col-lg-3 col-sm-6 col-12">
-                        <a href="../../html/HTML_HOME/Casio - Nữ LTP-1274D-7ADF  Size 22mm.html">
+                        <a href="../../html/HTML_HOME/Casio_NuLTP_1274D_7ADF_Size22mm.html">
                             <div class="item">
                                 <img src="../../img/pict1_home.jpg" alt="">
                                 <div class="infor_home text-start p-2">
@@ -154,7 +181,7 @@
                         </a>
                     </div>
                     <div class="col col-lg-3 col-sm-6 col-12">
-                        <a href="../../html/HTML_HOME/Casio - Nam MTP-1374L  Size 43.5mm.html">
+                        <a href="../../html/HTML_HOME/Casio_NamMTP_1374L_Size43.5mm.html">
                             <div class="item">
                                 <img src="../../img/pict2_home.jpg" alt="">
                                 <div class="infor_home text-start p-2">
@@ -195,7 +222,7 @@
                         </a>
                     </div>
                     <div class="col col-lg-3 col-sm-6 col-12">
-                        <a href="../../html/HTML_HOME/Longines - Nam L2.628.4.97.0  Size 38.5mm.html">
+                        <a href="../../html/HTML_HOME/Longines_NamL2.628.4.97.0_Size38.5mm.html">
                             <div class="item">
                                 <img src="../../img/pict3_home.jpg" alt="">
                                 <div class="infor_home text-start p-2">
@@ -236,7 +263,7 @@
                         </a>
                     </div>
                     <div class="col col-lg-3 col-sm-6 col-12">
-                        <a href="../../html/HTML_HOME/AW - Nữ LTP-1274D-7ADF  Size 22mm.html">
+                        <a href="../../html/HTML_HOME/AW_NuLTP_1274D_7ADF_Size22mm.html">
                             <div class="item">
                                 <img src="../../img/pict4_home.jpg" alt="">
                                 <div class="infor_home text-start p-2">
@@ -278,7 +305,7 @@
                         </a>
                     </div>
                     <div class="col col-lg-3 col-sm-6 col-12">
-                        <a href="../../html/HTML_HOME/Casio - Nữ LTP-V300L-4AUDF  Size 33.2mm.html">
+                        <a href="../../html/HTML_HOME/Casio_NuLTP_V300L_4AUDF_Size33.2mm.html">
                             <div class="item">
                                 <img src="../../img/pict5_home.jpg" alt="">
                                 <div class="infor_home text-start p-2">
@@ -319,7 +346,7 @@
                         </a>
                     </div>
                     <div class="col col-lg-3 col-sm-6 col-12">
-                        <a href="../../html/HTML_HOME/Orient - Nam FAG02003W0  Size 41mm.html">
+                        <a href="../../html/HTML_HOME/Orient_Nam_FAG02003W0_Size41mm.html">
                             <div class="item">
                                 <img src="../../img/pict6_home.jpg" alt="">
                                 <div class="infor_home text-start p-2">
@@ -362,7 +389,7 @@
                         </a>
                     </div>
                     <div class="col col-lg-3 col-sm-6 col-12">
-                        <a href="../../html/HTML_HOME/CELL Graphite SS  Size 44mm.html">
+                        <a href="../../html/HTML_HOME/CELL_GraphiteSS_Size44mm.html">
                             <div class="item">
                                 <img src="../../img/pict7_home.jpg" alt="">
                                 <div class="infor_home text-start p-2">
@@ -461,7 +488,7 @@
         </div>
 
         <div class="row footer">
-            <div class="col-lg-2 col-sm-6 col_footer1">
+            <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-4 col-xs-12 col_footer1">
                 <h5>LIÊN HỆ HỖ TRỢ</h5>
                 <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-telephone-fill" viewBox="0 0 16 16">
@@ -475,7 +502,7 @@
                     </svg> Hotline 2: <span>034.872.0408</span></p>
             </div>
 
-            <div class="col-lg-3 col-sm-6 col_footer2">
+            <div class="col-xxl-3 col-xl-2 col-lg-4 col-md-4 col-sx-12 col_footer2">
                 <h5>ĐỊA CHỈ</h5>
                 <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
@@ -484,7 +511,7 @@
                 </p>
             </div>
 
-            <div class="col-lg-2 col-sm-6 footer_contact">
+            <div class="col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-xs-12 footer_contact">
                 <h5>KẾT NỐI</h5>
                 <p>
                     <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -510,15 +537,15 @@
                 </p>
             </div>
 
-            <div class="col-lg-2 col-sm-6 footer_contact2">
+            <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-4 col-xs-12 footer_contact2">
                 <h5>HỖ TRỢ KHÁCH HÀNG</h5>
-                <p>Chính sách & Quy định chung</p>
+                <p>Quy định chung</p>
                 <p>Chính sách bảo hành</p>
                 <p>Chính sách bảo mật</p>
             </div>
 
-            <div class="col-lg-2 col-md-6 footer_img">
-                <h5>Chứng nhận</h5>
+            <div class="col-xxl col-xl-2 col-lg-4 col-md-4 col-md-6 col-xs-12 footer_img">
+                <h5>CHỨNG NHẬN</h5>
                 <a href="#"><img src="../../img/bo_cong_thuong.png" alt=""></a>
             </div>
         </div>
@@ -565,7 +592,28 @@
         </div>
         <!--/////////////-->
     </div>
+    <script>
+        (function (w, d, s, o, f, js, fjs) {
+            w["botsonic_widget"] = o;
+            w[o] =
+                w[o] ||
+                function () {
+                    (w[o].q = w[o].q || []).push(arguments);
+                };
+            (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+            js.id = o;
+            js.src = f;
+            js.async = 1;
+            fjs.parentNode.insertBefore(js, fjs);
+        })(window, document, "script", "Botsonic", "https://widget.writesonic.com/CDN/botsonic.min.js");
+        Botsonic("init", {
+            serviceBaseUrl: "https://api-azure.botsonic.ai",
+            token: "0f55ad83-5c22-422c-9c5f-7b17b540c8f5",
+        });
+    </script>
+
     <script src="../../js/home.js"></script>
+    <script src="../../js/responsive.js"></script>
 </body>
 
 </html>
