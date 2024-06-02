@@ -285,7 +285,7 @@
     img#logo-clockworld {
         width: 80% !important;
         padding-top: 5px;
-        transform: translateX(20%);
+        transform: translate(20%, -7%);
     }
 
     .navbar-nav li:nth-child(2),
@@ -354,6 +354,12 @@
 
     .col_cot_loi  {
         width: 30% !important;
+    }
+}
+
+@media (max-width:879px){
+    img#logo-clockworld {
+        transform: translate(20%, -2%);
     }
 }
 
