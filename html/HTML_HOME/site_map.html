@@ -133,18 +133,6 @@
 
         <div class="row row_4">
             <img src="../../img/site_map.png" alt="">
-            <!-- <div class="col-1 col_sidebar"></div> -->
-            <!-- <div class="col-10 col-main"></div> -->
-            <!-- <div class="col-1 col_sidebar">
-                <div class="zalo">
-                    <a href="#"><i class="fa-solid fa-phone-flip"></i></a>
-                </div>
-
-                <div class="mes">
-                    <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
-                </div>
-
-            </div> -->
         </div>
 
         <div class="row footer">
@@ -247,7 +235,25 @@
         </div>
         <!--/////////////-->
     </div>
-    <script src="../../js/home.js"></script>
+    <script>
+        (function (w, d, s, o, f, js, fjs) {
+            w["botsonic_widget"] = o;
+            w[o] =
+                w[o] ||
+                function () {
+                    (w[o].q = w[o].q || []).push(arguments);
+                };
+            (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+            js.id = o;
+            js.src = f;
+            js.async = 1;
+            fjs.parentNode.insertBefore(js, fjs);
+        })(window, document, "script", "Botsonic", "https://widget.writesonic.com/CDN/botsonic.min.js");
+        Botsonic("init", {
+            serviceBaseUrl: "https://api-azure.botsonic.ai",
+            token: "0f55ad83-5c22-422c-9c5f-7b17b540c8f5",
+        });
+    </script>
 </body>
 
 </html>
