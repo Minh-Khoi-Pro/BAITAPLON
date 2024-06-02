@@ -75,10 +75,6 @@
     margin: 0 auto;
 }
 
-.li_logo{
-    padding-top: 7px !important;
-}
-
 .row_2 #search:hover,
 .row_2 #search2:hover {
     transform: scale(1) !important;
@@ -284,6 +280,10 @@ img#logo-clockworld {
 .menu_1 ul li{
     display: inline-block;
     padding-top: 10px;
+}
+
+.li_logo{
+    padding-top: 7px !important;
 }
 
 .logo,
