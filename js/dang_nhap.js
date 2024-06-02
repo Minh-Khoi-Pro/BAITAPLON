@@ -6,8 +6,8 @@ $(document).ready(function(){
         return txtTaiKhoan !== "" && txtMatKhau !== "";
     }
 
-    function cssBackGround(){
-        if (checkEmpty()) {
+    function cssBackGround(){ //thay đôi màu nền nút đăng nhập 
+        if (checkEmpty()) { // nếu thông tin không rỗng thì nút đăng nhập đổi màu, ngược lại thì không đổi màu
             $("#submit_dang_nhap").css("background-color", "gray");
             $("#submit_dang_nhap").css("color", "black");
         }
@@ -17,10 +17,12 @@ $(document).ready(function(){
     }
     cssBackGround();
 
-    $("#tai_khoan, #mat_khau").on("input", function () {
+    $("#tai_khoan, #mat_khau").on("input", function () { //khi nhập tài khoản và mật khẩu vào ô input 
+                                                        //thì hàm cssBackGround() sẽ được thực hiện
         cssBackGround();
     });
 
+    //kiểm tra thông tin đăng nhập
     var taiKhoan = $("#tai_khoan");
     var tbTaiKhoan = $("#tb_tai_khoan");
      
@@ -29,7 +31,7 @@ $(document).ready(function(){
 
     icon_check_yes.css("display", "none");
     icon_check_no.css("display", "none");
-   function checkDangNhap(){
+    function checkDangNhap(){ 
        var inputEmail = /^[a-z]{1}\w{1,}@gmail\.com$/;
        var inputSDT = /^0[2-9]{1}\d{8}$/;
 
@@ -56,6 +58,7 @@ $(document).ready(function(){
    }
    taiKhoan.blur(checkDangNhap);
 
+   //kiểm tra thông tin mật khẩu
    var matKhau = $("#mat_khau");
    var tbMatKhau = $("#tb_mat_khau");
    var icon_check_yes_mk = $("#icon_check_yes_mk");
@@ -63,7 +66,7 @@ $(document).ready(function(){
 
    icon_check_yes_mk.css("display", "none");
    icon_check_no_mk.css("display", "none");
-   function checkMatKhau(){
+   function checkMatKhau(){ 
        if (matKhau.val() == ""){
            tbMatKhau.html("Vui lòng nhập mật khẩu vào");
            icon_check_yes_mk.css("display", "none");
@@ -79,16 +82,6 @@ $(document).ready(function(){
        return true;
    }
    matKhau.blur(checkMatKhau);
-
-    // var matKhau = $("#mat_khau").val();
-
-    // var checkAccout = localStorage.getItem(taiKhoan);
-    // if (checkAccout == matKhau)
-    //     alert("Dang nhap thanh cong");
-    // else
-    //     alert("Dang nhap khong thanh cong");
-    // //  var taiKhoan = $("#tai_khoan");
-
 
     $("#submit_dang_nhap").click(function(event) {
         event.preventDefault(); 

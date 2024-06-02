@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $("#tai_khoan, #mat_khau, #nhap_lai_mat_khau").val("");
 
-    //kiem tra ten dang nhap
+    //kiem tra ten dang nhap: so đien thoai hoac email
     var taiKhoan = $("#tai_khoan");
     var tbTaiKhoan = $("#tb_tai_khoan");
 
@@ -37,46 +37,6 @@ $(document).ready(function () {
     }
     taiKhoan.blur(checkDangNhap);
 
-    // $(document).ready(function () {
-    //     var taiKhoan = $("#tai_khoan");
-    //     var tbTaiKhoan = $("#tb_tai_khoan");
-    //     var icon_check_yes = $("#icon_check_yes");
-    //     var icon_check_no = $("#icon_check_no");
-
-    //     icon_check_yes.css("display", "none");
-    //     icon_check_no.css("display", "none");
-
-    //     taiKhoan.blur(function () {
-    //         checkDangNhap();
-    //     });
-
-    //     function checkDangNhap() {
-    //         var inputEmail = /^[a-z]{1}\w{1,}@gmail\.com$/;
-    //         var inputSDT = /^0[2-9]{1}\d{8}$/;
-
-    //         if (taiKhoan.val() == "") {
-    //             tbTaiKhoan.html("Vui lòng nhập dữ liệu vào");
-    //             icon_check_yes.css("display", "none");
-    //             icon_check_no.css("display", "block");
-    //             icon_check_no.css("color", "red");
-    //             return false;
-    //         }
-
-    //         if (!inputEmail.test(taiKhoan.val()) && !inputSDT.test(taiKhoan.val())) {
-    //             tbTaiKhoan.html("Vui lòng nhập email hoặc số điện thoại");
-    //             icon_check_yes.css("display", "none");
-    //             icon_check_no.css("display", "block");
-    //             icon_check_no.css("color", "red");
-    //             return false;
-    //         }
-    //         icon_check_no.css("display", "none");
-    //         icon_check_yes.css("display", "block");
-    //         icon_check_yes.css("color", "green");
-    //         tbTaiKhoan.html(" ");
-    //         return true;
-    //     }
-    // });
-
     //kiem tra mat khau
     var matKhau = $("#mat_khau");
     var tbMatKhau = $("#tb_mat_khau");
@@ -86,7 +46,8 @@ $(document).ready(function () {
     icon_check_yes_mk.css("display", "none");
     icon_check_no_mk.css("display", "none");
     function checkMatKhau() {
-        var inputMatKhau = /^[\w(!@#$%^&*()_)]{8,}$/;
+        var inputMatKhau = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-_=+{};:,<.>]).{8,}$/;
+        //mật khẩu phải có ít nhất 1 chữ Hoa, 1 chữ thường 1 số, 1 kí tự đặc biệt và độ dài 8 kí tự trở lên
         if (matKhau.val() == "") {
             tbMatKhau.html("Vui lòng nhập mật khẩu vào");
             icon_check_yes_mk.css("display", "none");
@@ -145,6 +106,7 @@ $(document).ready(function () {
     }
     checkMK.blur(checkLaiMK);
 
+    //Kiểm tra họ tên
     var hoTen = $("#hoTen");
     var tbHoTen = $("#tb_ho_ten");
     var inputHoTen = /^([A-Z]{1}[a-z]{0,6}(\s([A-Z]{1}[a-z]{0,6})){0,6})$/;
@@ -176,74 +138,77 @@ $(document).ready(function () {
     }
     hoTen.blur(checkHoTen);
 
-    var ngaySinh = $("#ngaySinh");
-    var tbNgaySinh = $("#tb_ngay_sinh");
+    //Kiểm tra ngày sinh
+    // var ngaySinh = $("#ngaySinh");
+    // var tbNgaySinh = $("#tb_ngay_sinh");
+    // var icon_check_yes_5 = $("#icon_check_yes5");
+    // var icon_check_no_5 = $("#icon_check_no5");
+
+    // icon_check_yes_5.css("display", "none");
+    // icon_check_no_5.css("display", "none");
+    // function checkNgaySinh() {
+    //     if (ngaySinh.val() == "") {
+    //         tbNgaySinh.html("Vui lòng chọn ngày sinh");
+    //         icon_check_yes_5.css("display", "none");
+    //         icon_check_no_5.css("display", "block");
+    //         icon_check_no_5.css("color", "red");
+    //         return false;
+    //     }
+    //     var day = new Date(ngaySinh.val());
+    //     var today = new Date();
+    //     var age = today.getFullYear() - day.getFullYear();
+    //     var month = today.getMonth() - day.getMonth();
+    //     if (month < 0 || (month == 0 && today.getDate() < day.getDate())) {
+    //         age--;
+    //     }
+    //     if (age < 16) {
+    //         tbNgaySinh.html("Bạn chưa đủ 16 tuổi");
+    //         icon_check_yes_5.css("display", "none");
+    //         icon_check_no_5.css("display", "block");
+    //         icon_check_no_5.css("color", "red");
+    //         return false;
+    //     }
+    //     tbNgaySinh.html("");
+    //     icon_check_no_5.css("display", "none");
+    //     icon_check_yes_5.css("display", "block");
+    //     icon_check_yes_5.css("color", "green");
+    //     return true;
+    // }
+    // ngaySinh.blur(checkNgaySinh);
+
+    //Kiểm tra địa chỉ
+    var diaChi = $("#diaChi");
+    var tbDiaChi = $("#tb_dia_chi");
     var icon_check_yes_5 = $("#icon_check_yes5");
     var icon_check_no_5 = $("#icon_check_no5");
+    var inputDiaChi = /^[A-Z0-9]+[/a-z0-9]{0,}(\s([A-Z0-9]{1}[a-z0-9]{0,}))*$/;
 
     icon_check_yes_5.css("display", "none");
     icon_check_no_5.css("display", "none");
-    function checkNgaySinh() {
-        if (ngaySinh.val() == "") {
-            tbNgaySinh.html("Vui lòng chọn ngày sinh");
+    function checkDiaChi() {
+        if (diaChi.val() == "") {
+            tbDiaChi.html("Vui lòng nhập địa chỉ vào");
             icon_check_yes_5.css("display", "none");
             icon_check_no_5.css("display", "block");
             icon_check_no_5.css("color", "red");
             return false;
         }
-        var day = new Date(ngaySinh.val());
-        var today = new Date();
-        var age = today.getFullYear() - day.getFullYear();
-        var month = today.getMonth() - day.getMonth();
-        if (month < 0 || (month == 0 && today.getDate() < day.getDate())) {
-            age--;
-        }
-        if (age < 16) {
-            tbNgaySinh.html("Bạn chưa đủ 16 tuổi");
+        if (!inputDiaChi.test(diaChi.val())) {
+            tbDiaChi.html("Vui lòng nhập đúng địa chỉ");
             icon_check_yes_5.css("display", "none");
             icon_check_no_5.css("display", "block");
             icon_check_no_5.css("color", "red");
             return false;
         }
-        tbNgaySinh.html("");
+        tbDiaChi.html("");
         icon_check_no_5.css("display", "none");
         icon_check_yes_5.css("display", "block");
         icon_check_yes_5.css("color", "green");
         return true;
     }
-    ngaySinh.blur(checkNgaySinh);
-
-    var diaChi = $("#diaChi");
-    var tbDiaChi = $("#tb_dia_chi");
-    var icon_check_yes_6 = $("#icon_check_yes6");
-    var icon_check_no_6 = $("#icon_check_no6");
-    var inputDiaChi = /^[A-Z0-9]+[/a-z0-9]{0,}(\s([A-Z0-9]{1}[a-z0-9]{0,}))*$/;
-
-    icon_check_yes_6.css("display", "none");
-    icon_check_no_6.css("display", "none");
-    function checkDiaChi() {
-        if (diaChi.val() == "") {
-            tbDiaChi.html("Vui lòng nhập địa chỉ vào");
-            icon_check_yes_6.css("display", "none");
-            icon_check_no_6.css("display", "block");
-            icon_check_no_6.css("color", "red");
-            return false;
-        }
-        if (!inputDiaChi.test(diaChi.val())) {
-            tbDiaChi.html("Vui lòng nhập đúng địa chỉ");
-            icon_check_yes_6.css("display", "none");
-            icon_check_no_6.css("display", "block");
-            icon_check_no_6.css("color", "red");
-            return false;
-        }
-        tbDiaChi.html("");
-        icon_check_no_6.css("display", "none");
-        icon_check_yes_6.css("display", "block");
-        icon_check_yes_6.css("color", "green");
-        return true;
-    }
     diaChi.blur(checkDiaChi);
 
+    //Kiểm tra rỗng
     function checkEmpty(){
         var TaiKhoan = $("#tai_khoan").val();
         var MatKhau = $("#mat_khau").val();

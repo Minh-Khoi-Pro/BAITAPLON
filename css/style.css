@@ -1,9 +1,4 @@
 
-/* body {
-    margin: 0;
-    background-color: #f0efef;
-} */
-
 *{
     margin: 0;
     padding: 0;
@@ -14,15 +9,7 @@
     clear: both;
 }
 
-.container {
-    width: 1170px;
-    margin: auto;
-    display: flex;
-    background-color: #fff;
-    padding: 0 !important;
-}
-
-.row_header{
+.row_header {
     position: fixed;
     top: 0;
     left: 0;
@@ -30,32 +17,37 @@
     z-index: 1;
 }
 
-.row_1{
+.row_1 {
     background-color: rgb(41, 40, 40);
     min-height: 50px;
-    padding: 0 90px !important;
-    margin: 0; /*thanh header bi thu lai nen de nhu z*/
+    padding: 0 90px;
+    margin: 0;
+    /*thanh header bi thu lai nen de nhu z*/
 }
 
 .row_1 ul {
     margin: 0;
 }
 
-.row_1 .ul_left{
-    width: 50%;
+.ul_left,
+.ul_right {
     float: left;
+    padding: 0;
 }
 
-.row_1 .ul_right{
-    width: 50%;
-    float: left;
+.ul_left {
+    width: 55%;
+}
+
+.ul_right {
+    width: 45%;
 }
 
 .row_1 ul li {
     display: inline-block;
 }
 
-.row_1 li > a{
+.row_1 li > a {
     display: block;
     text-decoration: none;
     color: white;
@@ -63,230 +55,258 @@
     line-height: 50px;
 }
 
-.row_1 li > a:hover, .row_2 li >a:hover{
+.row_1 li>a:hover,
+.row_2 li>a:hover {
     color: gray;
+    transform: scale(1.05);
 }
 
-.row_1 li:last-child > a{
+.row_1 li:last-child>a {
     border: none;
 }
 
-.row_1 img{
+.row_1 img {
     width: 24px;
     padding-bottom: 5px;
 }
 
-.row_2{
+.row_2 {
     background-color: rgb(235, 233, 233);
-    max-height: 70px;
+    height: 80px;
     max-width: 100%;
     padding: 0 !important;
     margin-left: 0;
     margin: 0 auto;
 }
 
-.logo{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 70px;
+#li_address, #li_address2 {
+    width: 90% !important;
+    border: 1px solid;
+    border-radius: 5px;
+    line-height: normal;
+    height: 60px;
+    padding-top: 3% !important;
 }
 
-.logo a{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-}
-
-.logo img{
-    display: flex;
-    width: 70px;
-    height: 52px;
-    margin-top: 0;
-    margin-right: 5px;
-}
-
-.logo i{
-    display: flex;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 70px;
-    margin-bottom: 0;
-}
-
-/* .row_2 .menu_1, .row_2 .menu_2{
-    min-height: 50%;
-} */
-
-
-.menu_1{
-    width: auto;
-    height: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    /* padding-right: 10px; */
-    padding-left: 90px !important;
-}
-
-.menu_1, .menu_1 .menu{
-    padding-right: 0;
-}
-
-
-.col-lg-10.menu{
-    height: 70px;
-    width: 1180px;
-}
-
-.menu_1 ul li{
-    display: inline-block;
-}
-
-.logo{
-    padding-left: 0;
-}
-
-.logo a{
-    width: 30%;
-    height: 70%;
-}
-
-.logo img, .logo p{
-    display: block;
-}
-
-.menu_1 .menu, .menu_1 ul{
-    padding-left: 0;
-}
-
-.menu > ul{
-    margin-bottom: 0;
-    max-width: 100%;
-    float: right;
-    /* padding-left: 8px; */
-}
-
-.menu_1 .logo{
-    padding-right: 0;
-}
-
-ul.menu_cap1{
+#li_address::before, #li_address2::before {
     width: 100%;
+    content: "Địa điểm giao hàng";
+    font-size: 10px;
+    height: 15px;
 }
 
-.menu_cap1 > li{
-    display: inline-block;
-    position: relative;
+#li_address2{
+    display: none;
 }
 
-.menu_cap1 > li > a{
-    line-height: 75px;
+.row_2 #search:hover,
+.row_2 #search2:hover {
+    transform: scale(1) !important;
 }
 
-.menu_cap1 li a{
-    line-height: 60px;
-    display: block;
-    font-size: 17px;
-    margin-right: 15px;
-    text-decoration: none;
+.row_2 .search,
+.row_2 .search2 {
+    width: 85%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin: 3px 0 0 5px;
+}
+
+.row_2 .search:focus,
+.row_2 .search2:focus {
+    outline: none;
+}
+
+.search2 {
+    display: none;
+}
+
+.navbar-nav {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 !important;
+}
+
+.nav-link {
+    padding: 8px 0 !important;
+}
+
+.navbar-nav li:nth-child(1) {
+    width: 16%;
+}
+
+img#logo-clockworld {
+    width: 20% !important;
+    height: 10% !important;
+}
+
+.navbar-nav li:nth-child(2) {
+    width: 9%;
+}
+
+.navbar-nav li:nth-child(3) {
+    width: 9%;
+}
+
+.navbar-nav li:nth-child(7) {
+    width: 9%;
+}
+
+.navbar-nav li:nth-child(5) {
+    width: 13%;
+    padding-top: 0;
+}
+
+.navbar-nav li:nth-child(5) a {
+    padding: 0 !important;
+}
+
+.navbar-nav li:nth-child(6) {
+    width: 15%;
+}
+
+.navbar-nav li:nth-child(6) a {
+    padding: 0 !important;
+}
+
+.navbar-nav li:nth-child(7) {
+    width: 10%;
+}
+
+.navbar-nav li:nth-child(8) {
+    width: 11%;
+}
+
+.navbar-nav li:nth-child(4),
+.navbar-nav li:nth-child(9) {
+    width: 7%;
+}
+
+.navbar-nav li:nth-child(10),
+.navbar-nav li:nth-child(11) {
+    width: 4%;
+}
+
+.dropdown-toggle::after {
+    margin-left: -0.1rem;
+    /*chinh khoang cach cua icon voi menu*/
+}
+
+.navbar-nav li>a, #li_address2 {
     color: black;
     font-weight: 500;
 }
 
-.menu_cap1 .menu_cap2{
-    position: absolute;
-    top: 55px;
-    display: none;
-    width: 165px;
-    height: auto;
-    padding: 10px 0;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 5px gray;
-    text-align: center;
-}
-
-.menu_cap2 > li > a{
-    margin-right: 0;
-}
-
-.menu_cap1 li:hover .menu_cap2{
-    display: block;
-    text-align: center;
-}
-
-.menu_cap2::after{
-    position: absolute;
-    top: -8px;
-    left: 35px;
-    content: "";
-    width: 18px;
-    height: 20px;
-    background-color: white;
-    transform: rotate(45deg);
-}
-
-.menu_cap1 #li_address{
-    border: 1px solid;
-    border-radius: 5px;
-    height: 60px;
-    padding: 0 8px;
-}
-
-#li_address::before{
-    content: "Chọn địa điểm giao hàng";
-    font-size: 10px;
-}
-
-.menu_cap1 li:nth-child(8) a{
-    margin: 8px !important;
-}
-
-.menu li:nth-child(7) a {
-    margin-right: 15px;
-}
-
-.menu input{
-    width: 280px;
-    padding: 10px;
-    margin-right: 20px;
-    border-radius: 5px;
-    border: 0;
-}
-
-.menu input:focus{
-    outline: none;
-}
-
-.menu_1 li a > img{
+.menu_1 li a>img {
     width: 25px;
     padding-bottom: 2px;
 }
 
-.row_2 .icon_cart{
-    margin-left: 15px;
+.menu_1 ul li {
+    display: inline-block;
+    padding-top: 10px;
 }
 
-.row_2 .icon_cart:hover, .row_2 .icon_account:hover{
+.menu_1 {
+    width: auto;
+    /* height: 100%; */
+    max-width: 100%;
+    margin: 0 auto;
+    padding-right: 10px;
+}
+
+.logo, .logo2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    padding: 0 8px !important;
+}
+
+.logo i, .logo2 i{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.logo i{
+    display: flex;
+}
+
+.logo2 {
+    display: none;
+}
+
+.dropdown-menu {
+    min-width: 80px !important;
+    margin-top: -10px !important;
+    margin-left: 30px;
+}
+
+.dropdown-menu::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    display: block;
+    border-top: 1px solid rgb(177, 174, 174);
+    border-left: 1px solid rgb(177, 174, 174);
+    transform: rotate(45deg);
+    margin-top: -16px;
+    margin-left: 20px;
+}
+
+.dropdown-item:hover {
+    background-color: transparent;
+    /*khi hover vào thì backgrround biến mất*/
+}
+
+#icon_cart,
+#icon_account {
+    width: 25px;
+}
+
+#icon_cart:hover,
+#icon_account:hover {
     transform: scale(1.2);
 }
 
-.content-left {
-    width: 60%;
-    margin-top: 90px;
-}
-
-.content-left .top {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.container_left_css{
+.content{
+    /* padding-top: 30%; */
+    margin-top: 140px !important;
     width: 100%;
+    margin-left: 0 !important;
+    /* padding-left: 10px; */
+}
+
+.content-left {
+    float: left;
+    width: 60% !important;
+    padding: 0 20px;
+}
+
+.content-left-top{
+    width: 100% !important;
+    min-height: 200px !important;
+    overflow: hidden;
+}
+
+.content-left img{
+    width: 50%;
+    float: left;
+}
+
+.content-left .price{
+    float: left;
+    width: 50%;
+    padding-left: 12px;
+}
+
+.content-left-bottom{
+    width: 100% !important;
+    margin-top: 10px;
 }
 
 .container_left_css .img_clock {
@@ -333,11 +353,173 @@ ul.menu_cap1{
 }
 
 .content-right {
-    padding-left: 20px;
-    width: 40%;
+    float: left;
+    padding: 0 20px;
+    width: 40% !important;
     box-sizing: border-box;
     border-left: 6px solid #f0efef;
-    margin-top: 120px;
+}
+
+.content-right .heading  {
+    color: #cc9933;
+}
+
+.detail ul{
+    list-style: none;
+    padding: 0;
+}
+
+.content-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content-right li {
+    font-size: 18px;
+    line-height: 1;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: justify;
+}
+
+.content-right li img {
+    width: 30px;
+    height: 25px;
+    margin-right: 8px;
+}
+
+.content-right a {
+    text-decoration: none;
+    color: black;
+}       
+
+.content-right a:hover {
+    color: #de1f26;
+}
+
+
+/*Footer*/
+.footer {
+    background-color: black;
+    height: auto;
+    padding: 10px 0;
+}
+
+.footer h5 {
+    color: yellow;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    color: white;
+    line-height: 20px !important;
+    margin-bottom: 5px;
+}
+
+.col_footer1 span:hover, 
+.col_footer2 a:hover,
+.footer_contact a:hover,
+.footer_contact2 p:hover{
+    color: yellow;
+}
+
+.col_footer1{
+    width: 20%;
+}
+
+.text_col_footer1{
+    width: 100%;
+    transform: translateX(15%);
+}
+
+.col_footer2{
+    width: 25%;
+}
+
+.col_footer2 a,
+.footer_contact a  {
+    text-decoration: none;
+    color: white;
+}
+
+.footer_contact img{
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 5px;
+    color: white;
+}
+
+.fa-brands {
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.footer_contact{
+    width: 15%;
+}
+
+.footer_contact2{
+    width: 20%;
+}
+
+.text_footer_contact2{
+    width: 100%;
+    transform: translateX(10%);
+}
+
+.footer_img{
+    width: 20%;
+}
+
+.footer_img img{
+    width: 90%;
+}
+
+/*Modal*/
+.close1 {
+    padding: 0 10px;
+    border: none;
+    background: none;
+    font-size: 30px;
+}
+
+.close {
+    float: right !important;
+    margin-bottom: 8px;
+}
+
+.modal {
+    --bs-modal-margin: 15%;
+}
+
+.modal_dialog_css{
+    width: 70%;
+}
+
+.modal_header_css {
+    height: 80px;
+}
+
+.modal_body_css select {
+    width: 100%;
+    height: 35px;
+    padding-left: 5px;
+}
+
+.modal_body_css select:nth-child(2),
+.modal_body_css select:nth-child(3) {
+    margin-top: 15px;
+}
+
+.modal_footer_css .xac_nhan_css {
+    width: 55%;
+    margin: 10px auto;
+    margin-bottom: 50px;
 }
 
 .zalo{
@@ -394,117 +576,4 @@ ul.menu_cap1{
     to{
         transform: rotate(20deg);
     }
-}
-
-.detail-heading .heading{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.content-right .heading  {
-    color: #cc9933;
-}
-
-.content-right ul {
-    list-style: none;
-    padding: 0;
-}
-
-.content-right li {
-    font-size: 18px;
-    line-height: 1;
-    text-transform: capitalize;
-    margin-bottom: 15px;
-    /* display: flex; */
-    justify-content: space-between;
-    align-items: center;
-    text-align: justify;
-}
-
-.content-right li img {
-    width: 30px;
-    height: 25px;
-    margin-right: 8px;
-}
-
-.content-right a {
-    text-decoration: none;
-    color: black;
-}       
-
-.content-right a:hover {
-    color: #de1f26;
-}
-
- .footer{
-    background-color: black;
-    height: auto;
-    padding: 10px 0;
-}
-
-
-
-.footer h5{
-    color: yellow;
-    margin-bottom: 15px;
-}
-
-.footer p{
-    color: white;
-    line-height: 20px !important;
-    margin-bottom: 5px;
-}
-
-.col_footer1 > p > span:hover, .col_footer2 a:hover{
-    color: yellow;
-}
-
-.col_footer1{
-    padding-left: 50px !important;
-    margin-left: 20px;
-}
-
-.col_footer2{
-    padding-left: 21px !important;
-    margin-left: 10px;
-}
-
-.col_footer2 a{
-    text-decoration: none;
-    color: white;
-}
-
-.footer_contact{
-    padding-left: 30px !important;
-}
-
-.footer_contact img, .footer_contact svg{
-    width: 36px;
-    height: 36px;
-    margin-right: 10px;
-    border: 1px solid;
-    border-radius: 50%;
-    padding: 5px;
-    color: white;
-}
-
-.footer_contact img:hover, .footer_contact svg:hover{
-    color: yellow;
-}
-
-.footer_contact i:hover{
-    color: yellow;
-}
-
-.footer_contact2{
-    padding-left: 21px !important;
-}
-
-.footer_img{
-    padding-left: 31px !important;
-}
-
-.footer_img img{
-    width: 80%;
 }

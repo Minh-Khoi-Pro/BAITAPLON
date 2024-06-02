@@ -8,6 +8,7 @@
     clear: both;
 }
 
+/*Header*/
 .row_header {
     position: fixed;
     top: 0;
@@ -46,7 +47,7 @@
     display: inline-block;
 }
 
-.row_1 li>a {
+.row_1 li > a {
     display: block;
     text-decoration: none;
     color: white;
@@ -76,6 +77,26 @@
     padding: 0 !important;
     margin-left: 0;
     margin: 0 auto;
+}
+
+#li_address, #li_address2 {
+    width: 90% !important;
+    border: 1px solid;
+    border-radius: 5px;
+    line-height: normal;
+    height: 60px;
+    padding-top: 3% !important;
+}
+
+#li_address::before, #li_address2::before {
+    width: 100%;
+    content: "Địa điểm giao hàng";
+    font-size: 10px;
+    height: 15px;
+}
+
+#li_address2{
+    display: none;
 }
 
 .row_2 #search:hover,
@@ -109,11 +130,6 @@
 
 .nav-link {
     padding: 8px 0 !important;
-}
-
-.logo,
-.logo2 {
-    padding: 0 8px !important;
 }
 
 .navbar-nav li:nth-child(1) {
@@ -182,8 +198,9 @@ img#logo-clockworld {
     font-weight: 500;
 }
 
-.navbar-nav li a:focus {
-    color: red;
+.menu_1 ul li {
+    display: inline-block;
+    padding-top: 10px;
 }
 
 .menu_1 li a>img {
@@ -205,6 +222,7 @@ img#logo-clockworld {
     justify-content: center;
     align-items: center;
     padding: 0;
+    padding: 0 8px !important;
 }
 
 .logo i, .logo2 i{
@@ -219,16 +237,6 @@ img#logo-clockworld {
 
 .logo2 {
     display: none;
-}
-
-#icon_cart,
-#icon_account {
-    width: 25px;
-}
-
-#icon_cart:hover,
-#icon_account:hover {
-    transform: scale(1.2);
 }
 
 .dropdown-menu {
@@ -253,6 +261,16 @@ img#logo-clockworld {
 .dropdown-item:hover {
     background-color: transparent;
     /*khi hover vào thì backgrround biến mất*/
+}
+
+#icon_cart,
+#icon_account {
+    width: 25px;
+}
+
+#icon_cart:hover,
+#icon_account:hover {
+    transform: scale(1.2);
 }
 
 .row_3 {
@@ -281,17 +299,11 @@ img#logo-clockworld {
     background-color: red;
 }
 
-.footer {
-    background-color: black;
-    height: auto;
-    padding: 10px 0;
-}
-
 .row-con2 {
     height: auto;
 }
 
-.row-con2 a {
+.row_4 a{
     text-decoration: none;
 }
 
@@ -335,72 +347,9 @@ img#logo-clockworld {
     margin-bottom: 0;
     line-height: 70px;
 }
+/**/
 
-
-
-/* .menu_1,
-.menu_1 .menu {
-    padding-right: 0;
-} */
-
-/* .col-lg-10.menu {
-    height: 70px;
-} */
-
-.menu_1 ul li {
-    display: inline-block;
-    padding-top: 10px;
-}
-
-.logo,
-.logo2 {
-    padding-left: 0;
-}
-
-.logo a {
-    width: 30%;
-    height: 70%;
-}
-
-.logo img,
-.logo i {
-    display: block;
-}
-
-.menu>ul {
-    margin-bottom: 0;
-    max-width: 100%;
-    float: right;
-}
-
-.menu_1>li>a {
-    line-height: 75px;
-    padding: 0;
-}
-
-
-#li_address, #li_address2 {
-    width: 90% !important;
-    border: 1px solid;
-    border-radius: 5px;
-    line-height: normal;
-    height: 60px;
-    padding-top: 3% !important;
-    /* padding: 0; */
-    /* margin-top: 8px; */
-}
-
-#li_address::before, #li_address2::before {
-    width: 100%;
-    content: "Địa điểm giao hàng";
-    font-size: 8px;
-    height: 15px;
-}
-
-#li_address2{
-    display: none;
-}
-
+/*Body*/
 .infor_home p {
     margin-bottom: 0;
     color: black;
@@ -434,11 +383,12 @@ img#logo-clockworld {
     color: red;
 }
 
-.icon_star>svg {
-    color: yellow;
-    font-size: 80%;
+/*Footer*/
+.footer {
+    background-color: black;
+    height: auto;
+    padding: 10px 0;
 }
-
 
 .footer h5 {
     color: yellow;
@@ -451,32 +401,33 @@ img#logo-clockworld {
     margin-bottom: 5px;
 }
 
-.col_footer1>p>span:hover,
-.col_footer2 a:hover {
+.col_footer1 span:hover, 
+.col_footer2 a:hover,
+.footer_contact a:hover,
+.footer_contact2 p:hover{
     color: yellow;
 }
 
-.col_footer1 {
-    padding-left: 50px;
-    /* margin-left: 20px; */
+.col_footer1{
+    width: 20%;
 }
 
-.col_footer2 {
-    padding-left: 21px;
-    /* margin-left: 10px; */
+.text_col_footer1{
+    width: 100%;
+    transform: translateX(15%);
 }
 
-.col_footer2 a {
+.col_footer2{
+    width: 25%;
+}
+
+.col_footer2 a,
+.footer_contact a  {
     text-decoration: none;
     color: white;
 }
 
-.footer_contact {
-    padding-left: 30px;
-}
-
-.footer_contact img,
-.footer_contact svg {
+.footer_contact img{
     width: 36px;
     height: 36px;
     margin-right: 10px;
@@ -486,32 +437,33 @@ img#logo-clockworld {
     color: white;
 }
 
-.footer_contact img:hover,
-.footer_contact svg:hover {
-    color: yellow;
+.fa-brands {
+    font-size: 30px;
+    margin-right: 5px;
 }
 
-.footer_contact2 {
-    padding-left: 21px;
+.footer_contact{
+    width: 15%;
 }
 
-.footer_img {
-    padding-left: 31px;
+.footer_contact2{
+    width: 20%;
 }
 
-.footer_img img {
+.text_footer_contact2{
+    width: 100%;
+    transform: translateX(10%);
+}
+
+.footer_img{
+    width: 20%;
+}
+
+.footer_img img{
     width: 90%;
 }
 
-.col_footer1,
-.col_footer2,
-.footer_contact,
-.footer_contact2 {
-    padding-right: 0;
-}
-
 /*Modal*/
-
 .close1 {
     padding: 0 10px;
     border: none;
@@ -529,7 +481,7 @@ img#logo-clockworld {
 }
 
 .modal_dialog_css{
-    width: 50%;
+    width: 70%;
 }
 
 .modal_header_css {
@@ -552,6 +504,7 @@ img#logo-clockworld {
     margin: 10px auto;
     margin-bottom: 50px;
 }
+/**/
 
 .col_sidebar .zalo {
     transform: rotate(270deg);
