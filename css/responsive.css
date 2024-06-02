@@ -309,7 +309,7 @@
     img#logo-clockworld {
         width: 80% !important;
         padding-top: 5px;
-        transform: translate(20%, -7%);
+        transform: translate(20%, 5%);
     }
 
     .navbar-nav li:nth-child(2),
@@ -381,11 +381,11 @@
     }
 }
 
-@media (max-width:879px){
+/* @media (max-width:879px){
     img#logo-clockworld {
-        transform: translate(20%, -2%);
+        transform: translate(20%, 8%);
     }
-}
+} */
 
 @media (max-width: 767px) {
     .row_1 {
