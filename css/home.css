@@ -79,6 +79,10 @@
     margin: 0 auto;
 }
 
+.li_logo{
+    padding-top: 7px !important;
+}
+
 #li_address, #li_address2 {
     width: 90% !important;
     border: 1px solid;
@@ -210,7 +214,6 @@ img#logo-clockworld {
 
 .menu_1 {
     width: auto;
-    /* height: 100%; */
     max-width: 100%;
     margin: 0 auto;
     padding-right: 10px;

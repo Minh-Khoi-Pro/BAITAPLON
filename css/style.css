@@ -79,6 +79,10 @@
     margin: 0 auto;
 }
 
+.li_logo{
+    padding-top: 7px !important;
+}
+
 #li_address, #li_address2 {
     width: 90% !important;
     border: 1px solid;
@@ -97,6 +101,10 @@
 
 #li_address2{
     display: none;
+}
+
+.li_logo{
+    padding-top: 7px !important;
 }
 
 .row_2 #search:hover,

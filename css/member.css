@@ -78,6 +78,10 @@
     margin: 0 auto;
 }
 
+.li_logo{
+    padding-top: 7px !important;
+}
+
 .row_2 #search:hover,
 .row_2 #search2:hover {
     transform: scale(1) !important;
