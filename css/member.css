@@ -628,8 +628,13 @@ img#logo-clockworld {
     font-size: 25px;
 }
 
-.modal.modal_address {
+.modal.modal_address,
+.modal.modal_css {
     --bs-modal-margin: 15%;
+}
+
+.modal_dialog_css{
+    width: 70%;
 }
 
 .modal_body_css1 select {
@@ -646,6 +651,10 @@ img#logo-clockworld {
 .modal_body_css select:nth-child(2),
 .modal_body_css select:nth-child(3) {
     margin-top: 15px;
+}
+
+.info_tv{
+    padding: 0;
 }
 
 .modal_footer_css .xac_nhan_css {
