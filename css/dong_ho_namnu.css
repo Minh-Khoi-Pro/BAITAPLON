@@ -633,10 +633,6 @@ img#logo-clockworld {
     --bs-modal-margin: 15%;
 }
 
-.modal_dialog_css {
-    width: 50%;
-}
-
 .modal_header_css {
     height: 80px;
 }

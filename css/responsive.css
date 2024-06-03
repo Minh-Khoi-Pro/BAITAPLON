@@ -381,12 +381,6 @@
     }
 }
 
-/* @media (max-width:879px){
-    img#logo-clockworld {
-        transform: translate(20%, 8%);
-    }
-} */
-
 @media (max-width: 767px) {
     .row_1 {
         padding: 0;
@@ -591,12 +585,29 @@
     .text_dk h3{
         transform: translateY(10%);
     }
+
+    .col-sm-6.col-12{
+        transform: translateX(-4%);
+    }
 }
 
-@media (max-width: 576px){
+@media (max-width:621px){
+    .row-con1 h3{
+        line-height: 40px;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 577px){
     .content-left .img_clock,
     .content-left .price{
         width: 100%;
+    }
+}
+
+@media (max-width: 576px){
+    .col-sm-6.col-12{
+        transform: translateX(-2%);
     }
 }
 
