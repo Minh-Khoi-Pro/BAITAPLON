@@ -214,11 +214,10 @@ $(document).ready(function () {
         var MatKhau = $("#mat_khau").val();
         var CheckMK = $("#nhap_lai_mat_khau").val();
         var HoTen = $("#hoTen").val();
-        var ngaySinh = $("#ngaySinh").val();
         var DiaChi = $("#diaChi").val();
         var gioiTinh = $('[name="gt"]:radio:checked').val();
         return TaiKhoan !== "" && MatKhau !== "" && CheckMK !== ""
-                && HoTen != ""  && ngaySinh !== "" && DiaChi !== "" && gioiTinh !== undefined;
+                && HoTen != "" && DiaChi !== "" && gioiTinh !== undefined;
     }
     // checkEmpty();
 
@@ -234,7 +233,7 @@ $(document).ready(function () {
     }
     // cssBackGround();
 
-    $("#tai_khoan, #mat_khau, #nhap_lai_mat_khau, #hoTen, #ngaySinh, #diaChi, [name='gt']").on("input change", function () {
+    $("#tai_khoan, #mat_khau, #nhap_lai_mat_khau, #hoTen, #diaChi, [name='gt']").on("input change", function () {
         cssBackGround();
     });
 
@@ -250,7 +249,6 @@ $(document).ready(function () {
                 + "Tài khoản: " + ThongTinTaiKhoan + "\n"
                 + "Mật khẩu: " + ThongTinMatKhau + "\n"
                 + "Họ tên: " + hoTen.val() + "\n"
-                + "Ngày sinh: " + ngaySinh.val() + "\n"
                 + "Địa chỉ: " + diaChi.val() + "\n"
                 + "Giới tinh: " + gioiTinh);
             window.location.reload(); //load lai trang khi du lieu nhap dung
